@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Área que organiza os oito cubos */
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    grid-template-rows: repeat(2, 250px);
+    gap: 8px;
+
+    width: fit-content;
+    padding: 10px;
+    background-color: #0b2433;
+}
+
+/* Configuração geral dos cubos */
+.cubo1,
+.cubo2,
+.cubo3,
+.cubo4,
+.cubo5,
+.cubo6,
+.cubo7,
+.cubo8 {
+    display: flex;
+    width: 250px;
+    height: 250px;
+    padding: 15px;
+    background-color: #12334a;
+    border-radius: 4px;
+}
+
+/* Configuração geral das caixinhas */
+.caixinhas {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 3px;
+}
+
+/* Cores das quatro caixinhas */
+.caixinhas:nth-child(1) {
+    background-color: #8bcfff;
+}
+
+.caixinhas:nth-child(2) {
+    background-color: #54a8e8;
+}
+
+.caixinhas:nth-child(3) {
+    background-color: #347fca;
+}
+
+.caixinhas:nth-child(4) {
+    background-color: #24609a;
+}
+
+/* Cubo 1: caixinhas na horizontal, no topo à esquerda */
+.cubo1 {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Cubo 2: caixinhas na vertical, à esquerda */
+.cubo2 {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Cubo 3: caixinhas na vertical, centralizadas na horizontal */
+.cubo3 {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Cubo 4: caixinhas na horizontal e centralizadas */
+.cubo4 {
+    justify-content: center;
+    align-items: center;
+}
+
+/* Cubo 5: caixinhas no canto inferior direito */
+.cubo5 {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+/* Cubo 6: caixinhas na horizontal, no topo à esquerda */
+.cubo6 {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Cubo 6: segunda caixinha mais larga */
+.cubo6 .caixinhas:nth-child(2) {
+    width: 80px;
+}
+
+/* Cubo 7: caixinhas na horizontal, com a terceira branca */
+.cubo7 {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.cubo7 .caixinhas:nth-child(3) {
+    background-color: #ffffff;
+}
+
+/* Cubo 8: caixinhas organizadas em duas linhas */
+.cubo8 {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 4px;
+}
+
+/* Cubo 8: caixinhas maiores */
+.cubo8 .caixinhas {
+    width: 80px;
+    height: 70px;
+}
+/**/
